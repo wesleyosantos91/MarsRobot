@@ -1,0 +1,39 @@
+### Case 1 Movimento com rotação para direita:
+POST http://localhost:8080/v1/robots
+Content-Type: application/json
+
+{
+  "command" : "MMRMMRMM"
+}
+
+### Case 2 Movimento para esquerda:
+POST http://localhost:8080/v1/robots
+Content-Type: application/json
+
+{
+  "command" : "MML"
+}
+
+### Case 3 Repetição da requisição com movimento para esquerda:
+POST http://localhost:8080/v1/robots
+Content-Type: application/json
+
+{
+  "command" : "MML"
+}
+
+### Case 4 Comando inválido:
+POST http://localhost:8080/v1/robots
+Content-Type: application/json
+
+{
+  "command" : "AAA"
+}
+
+### Case 5 Posição inválida:
+POST http://localhost:8080/v1/robots
+Content-Type: application/json
+
+{
+  "command" : "MMMMMMMMMMMMMMMMMMMMMMMM"
+}
